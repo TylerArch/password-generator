@@ -1,17 +1,4 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
 // Global variables
 var pwLength;
@@ -73,14 +60,51 @@ function makeRandom(arr) {
 
 // function to generate password
 function generatePassword() {
-  console.log("start here");
-  pwOptions();
+  // console.log("start here");
+  var options = pwOptions();
+  var finalPassword = [];
+  var possibleOptions = [];
+  var combinedOptions = [];
+
+//adding a random element to the array of possible options and combined options
+if (options.useLowerCaseLtrs) {
+  possibleOptions = possibleOptions.concat(lowerCaseLtrs);
+  combinedOptions.push(makeRandom(lowerCaseLtrs))
+}
+if (options.useUpperCaseLtrs) {
+  possibleOptions = possibleOptions.concat(upperCaseLtrs);
+  combinedOptions.push(makeRandom(upperCaseLtrs))
+}
+if (options.useSpecialCharacters) {
+  possibleOptions = possibleOptions.concat(specialChars);
+  combinedOptions.push(makeRandom(specialChars))
+}
+if (options.useNumbers) {
+  possibleOptions = possibleOptions.concat(numbers);
+  combinedOptions.push(makeRandom(numbers))
+}
+for (i = 0; i <options.pwLength; i++) {
+  var possibleCharacter = makeRandom(possibleOptions);
+  finalPassword.push(possibleCharacter);
+}
+
+for (i = 0; i <combinedOptions.length; i++) {
+  finalPassword[i] = combinedOptions[i];
+}
+return finalPassword.join("");
+}
+
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 
 }
 
-// Grabbing random element from an array:
-// var min = x;
-// var max = y;
-// var random = Math.floor(Math.random() * (max - min + 1) + min)
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
-// return (finalpassword);
