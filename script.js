@@ -34,18 +34,16 @@ function pwOptions(){
   console.log(useNumbers)
     if (!useLowerCaseLtrs && !useUpperCaseLtrs && !useSpecialCharacters && !useNumbers) {
       window.alert("At least one character type is required for the password");
-    return;}
+    return;//Do I need to add var name here?
+}
 
-
-// for (var i = 0; i < pwLength; i++) {
-//   console.log("This is the amount of characters: " + pwLength[i] + ".");
-//   }
-var passwordOptions = {
-  pwLength: pwLength,
-  useLowerCaseLtrs: useLowerCaseLtrs,
-  useUpperCaseLtrs: useUpperCaseLtrs,
-  useSpecialCharacters: useSpecialCharacters,
-  useNumbers: useNumbers
+//I have questions about this for Gene Paul
+  var passwordOptions = {
+    pwLength: pwLength,
+    useLowerCaseLtrs: useLowerCaseLtrs,
+    useUpperCaseLtrs: useUpperCaseLtrs,
+    useSpecialCharacters: useSpecialCharacters,
+    useNumbers: useNumbers
 };
 return passwordOptions;
 
@@ -96,7 +94,7 @@ return finalPassword.join("");
 
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// Write password to the password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
