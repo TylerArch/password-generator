@@ -19,7 +19,7 @@ Here is a screenshot of the landing page:
 
 Here is the link to the live webpage:
 
-<!-- https:Placeholder -->
+<!-- https://tylerarch.github.io/password-generator/ -->
 
 ## Credits
 
