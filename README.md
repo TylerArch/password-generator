@@ -15,11 +15,11 @@ A randomly generated password with the specified components will display in the 
 
 Here is a screenshot of the landing page:
 
-<!-- [alt text](assets/images/landing-page-screenshot.png) -->
+[alt text](assets/images/landing-page-screenshot.png)
 
 Here is the link to the live webpage:
 
-<!-- https://tylerarch.github.io/password-generator/ -->
+https://tylerarch.github.io/password-generator/
 
 ## Credits
 
