@@ -15,7 +15,7 @@ A randomly generated password with the specified components will display in the 
 
 Here is a screenshot of the landing page:
 
-![Application Preview](https://github.com/TylerArch/password-generator/blob/main/assets/images/landing-page-screenshot.png?raw=true)
+![Application Preview](https://github.com/TylerArch/password-generator/blob/main/Assets/images/landing-page-screenshot.png?raw=true)
 
 Here is the link to the live webpage:
 
